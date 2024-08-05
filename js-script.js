@@ -10,3 +10,12 @@ for (let i = 0; i < 16; i++){
     }
     container.appendChild(gridRow)
 }
+const cells = document.querySelectorAll(".cell");
+cells.forEach((cell) => {
+    cell.addEventListener("mouseenter", () => {
+        cell.setAttribute("style","background-color:#cfcfe5;")
+    })
+    cell.addEventListener("mouseleave", () => {
+        cell.setAttribute("style","background-color: none;")
+    })
+})

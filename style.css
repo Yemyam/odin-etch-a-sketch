@@ -35,14 +35,14 @@ html, body {
 }
 
 .cell {
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: auto;
   margin: 0px;
-  padding: 1rem;
+  padding: 16px;
   border: 1px solid black;
 }
 
