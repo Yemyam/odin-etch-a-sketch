@@ -26,8 +26,13 @@ html, body {
 }
 
 #container {
+    display: flex;
+    flex-wrap: wrap;
     border: 1px solid black;
-    max-width: 700px;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 600px;
+    max-height: 600px;
 }
 
 .row {
@@ -42,8 +47,8 @@ html, body {
   flex-shrink: 0;
   flex-basis: auto;
   margin: 0px;
-  padding: 16px;
-  border: 1px solid black;
+  box-sizing: border-box;
+  border: 0.1px solid lightgrey;
 }
 
 .footer {
@@ -53,4 +58,8 @@ html, body {
     justify-content: center;
     align-items: center;
     color: #E5E7EB;
+}
+
+.hovered {
+    background-color:#cfcfe5;
 }
