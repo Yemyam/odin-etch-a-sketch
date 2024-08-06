@@ -18,7 +18,7 @@ html, body {
 
 #middle {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     height: 100%;
     background-color: lavender;
@@ -62,4 +62,22 @@ html, body {
 
 .hovered {
     background-color:#cfcfe5;
+}
+
+.settings {
+    justify-content: center;
+    flex: 1;
+}
+
+.right {
+    flex: 1;
+}
+
+.settingstext {
+    text-align: center;
+}
+
+.slidecontainer {
+    display: flex;
+    justify-content: center;
 }
