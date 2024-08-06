@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 createGrid(50);
+var rainbow = false;
 var mousedown = false;
 var colorpicker = document.querySelector("#MyColorPicker")
 var slider = document.querySelector(".slider")
@@ -29,6 +30,9 @@ function createGrid(dimension) {
         cell.addEventListener("mouseenter", () => {
             cell.classList.add("hovered")
             if(mousedown){
+                if (rainbow) {
+                    colorpicker.value = getRandomColor();
+                }
                 cell.style.background = colorpicker.value;
             }
         })
@@ -37,6 +41,9 @@ function createGrid(dimension) {
         })
         cell.addEventListener("mousedown", () => {
             mousedown = true;
+            if (rainbow) {
+                colorpicker.value = getRandomColor();
+            }
             cell.style.background = colorpicker.value;
         })
         cell.addEventListener("mouseup", () => {
@@ -49,4 +56,23 @@ var clearbtn = document.querySelector(".clearbtn");
 clearbtn.addEventListener("click",() => {
     container.replaceChildren();
     createGrid(slider.value);
+})
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+var rainbowbtn = document.querySelector(".rainbowbtn");
+rainbowbtn.addEventListener("click", () => {
+    if (!rainbow) {
+        rainbow = true;
+    }
+    else {
+        rainbow = false;
+    }
 })
