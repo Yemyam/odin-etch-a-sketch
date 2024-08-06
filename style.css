@@ -62,16 +62,25 @@ html, body {
 }
 
 .settings {
-    justify-content: center;
-    flex: 1;
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    padding: 5px;  
+    border-radius: 5%;
+    background-color: rgb(221, 221, 221);
 }
 
-.right {
+.right, .left {
+    display: flex;
     flex: 1;
+    justify-content: center;
+
 }
 
 .settingstext {
     text-align: center;
+    margin: 25px;
+    font-weight: normal;
 }
 
 .slidecontainer {
@@ -81,7 +90,7 @@ html, body {
 
 .slider {
     -webkit-appearance: none;
-    width: 30%;
+    width: 50%;
     height: 15px;
     border-radius: 5px;  
     background: #bcbcbc;
@@ -115,4 +124,39 @@ html, body {
 
   .colored {
     background-color: black;
+  }
+
+  .circle {
+    height: 80px;
+    width: 80px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 50%;
+    display: inline-block;
+    background-color: red;
+    margin-bottom: 25px;
+    transition: 0.3s;
+  } 
+  .circle:hover {
+    transform: scale(1.1);
+  }
+
+  .clearbtn {
+    margin: 25px;
+    background-color: rgb(221, 221, 221);
+    border: none;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5%;
+    font-size: 1.17em;
+    transition: 0.2s;
+  }
+  
+  .clearbtn:hover {
+    transform: scale(1.1);
+    background-color: #bcbcbc;
   }

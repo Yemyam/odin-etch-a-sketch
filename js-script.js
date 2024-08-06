@@ -44,3 +44,8 @@ function createGrid(dimension) {
         })
     })
 }
+
+// var circle = document.querySelector(".circle");
+// circle.addEventListener("mouseover",() => {
+
+// })
