@@ -1,7 +1,7 @@
 const container = document.querySelector("#container");
 createGrid(50);
 var mousedown = false;
-
+var colorpicker = document.querySelector("#MyColorPicker")
 var slider = document.querySelector(".slider")
 var resolution = document.querySelector("#resolution")
 slider.oninput = function() {
@@ -29,7 +29,7 @@ function createGrid(dimension) {
         cell.addEventListener("mouseenter", () => {
             cell.classList.add("hovered")
             if(mousedown){
-                cell.classList.add("colored")
+                cell.style.background = colorpicker.value;
             }
         })
         cell.addEventListener("mouseleave", () => {
@@ -37,7 +37,7 @@ function createGrid(dimension) {
         })
         cell.addEventListener("mousedown", () => {
             mousedown = true;
-            cell.classList.add("colored")
+            cell.style.background = colorpicker.value;
         })
         cell.addEventListener("mouseup", () => {
             mousedown = false;
@@ -45,7 +45,8 @@ function createGrid(dimension) {
     })
 }
 
-// var circle = document.querySelector(".circle");
-// circle.addEventListener("mouseover",() => {
-
-// })
+var clearbtn = document.querySelector(".clearbtn");
+clearbtn.addEventListener("click",() => {
+    container.replaceChildren();
+    createGrid(slider.value);
+})

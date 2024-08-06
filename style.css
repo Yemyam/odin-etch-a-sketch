@@ -126,20 +126,6 @@ html, body {
     background-color: black;
   }
 
-  .circle {
-    height: 80px;
-    width: 80px;
-    border: 1px solid rgb(180, 180, 180);
-    border-radius: 50%;
-    display: inline-block;
-    background-color: red;
-    margin-bottom: 25px;
-    transition: 0.3s;
-  } 
-  .circle:hover {
-    transform: scale(1.1);
-  }
-
   .clearbtn {
     margin: 25px;
     background-color: rgb(221, 221, 221);
@@ -159,4 +145,8 @@ html, body {
   .clearbtn:hover {
     transform: scale(1.1);
     background-color: #bcbcbc;
+  }
+
+  #MyColorPicker {
+    margin-bottom: 25px;
   }
