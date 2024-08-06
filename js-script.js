@@ -23,12 +23,8 @@ cells.forEach((cell) => {
     })
 })
 
-// container.addEventListener("mouseover",(event) => {
-//     let target = event.target;
-//     target.classList.add("hovered");
-// })
-// container.addEventListener("mouseleave", (event => {
-//     let target = event.target;
-//     console.log(target)
-//     target.classList.remove("hovered")
-// }))
+var slider = document.querySelector(".slider")
+var resolution = document.querySelector("#resolution")
+slider.oninput = function() {
+    resolution.textContent = this.value + " X " + this.value
+  }

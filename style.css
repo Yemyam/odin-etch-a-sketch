@@ -5,6 +5,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: lightgray;
 }
 
 .header {
@@ -12,8 +13,7 @@ html, body {
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: lightgrey;  
+    align-items: center; 
 }
 
 #middle {
@@ -21,7 +21,6 @@ html, body {
     justify-content:center;
     align-items: center;
     height: 100%;
-    background-color: lavender;
     
 }
 
@@ -48,20 +47,18 @@ html, body {
   flex-basis: auto;
   margin: 0px;
   box-sizing: border-box;
-  border: 0.1px solid lightgrey;
+  border: 0.1px solid rgb(185, 185, 185);
 }
 
 .footer {
     height: 50px;
-    background-color: lightgrey;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #E5E7EB;
 }
 
 .hovered {
-    background-color:#cfcfe5;
+    background-color: rgb(197, 196, 196);
 }
 
 .settings {
@@ -81,3 +78,37 @@ html, body {
     display: flex;
     justify-content: center;
 }
+
+.slider {
+    -webkit-appearance: none;
+    width: 30%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #bcbcbc;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: black;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
