@@ -1,5 +1,6 @@
 const container = document.querySelector("#container");
 createGrid(50);
+var mousedown = false;
 
 var slider = document.querySelector(".slider")
 var resolution = document.querySelector("#resolution")
@@ -27,9 +28,19 @@ function createGrid(dimension) {
     cells.forEach((cell) => {
         cell.addEventListener("mouseenter", () => {
             cell.classList.add("hovered")
+            if(mousedown){
+                cell.classList.add("colored")
+            }
         })
         cell.addEventListener("mouseleave", () => {
         cell.classList.remove("hovered")
         })
-})
+        cell.addEventListener("mousedown", () => {
+            mousedown = true;
+            cell.classList.add("colored")
+        })
+        cell.addEventListener("mouseup", () => {
+            mousedown = false;
+        })
+    })
 }
